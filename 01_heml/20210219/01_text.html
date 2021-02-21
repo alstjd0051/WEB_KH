@@ -1,0 +1,74 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>text관련</title>
+    </head>
+    <body>
+        <h1>text관련</h1>
+        <a href="index.html">인덱스 페이지 이동</a> <!-- emmit-->
+     
+        <!-- 머리글 텍스트-->
+        <!-- <h1>머릿글1</h1>
+        <h2>머리글2</h2>
+        <h3>머릿글3</h3>
+        <h4>머리글4</h4>
+        <h4>머릿글4</h4>
+        <h5>머릿글5</h5>
+        <h6>머릿글6</h6> -->
+        <h1>{머릿글}</h1> <!--중괄호{컨텐츠작성}-->
+        <h2>{머릿글2}</h2> <!-- h$*6 = h1~h6까지-->
+        <!-- h$*6 $(달러는 증감변수)-->
+        <!-- h${머릿글$}*6 -->
+        <h1>머릿글1</h1>
+        <h2>머릿글2</h2>
+        <h3>머릿글3</h3>
+        <h4>머릿글4</h4>
+        <h5>머릿글5</h5>
+        <h6>머릿글6</h6>
+
+        <!-- 문단태그 -->
+        <p>안녕하세요. 홍길동입니다</p> <!-- <p>는 줄바꿈이 된다-->
+        <p>반갑습니다.</p>
+        <!--&nbsp; 공백하나-->
+        <p>안녕하세요. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;miiin_sseong입니다. <!-- &nbsp;는 공백문자-->
+            <br> <!-- html용 개행문자-->
+            반갑습니다.
+        </p>
+        <!-- pre-formateed 미리 형식지정이 된 태그  공백/개행-->
+        <pre>
+            Do you wanna build a snow man.             Nope
+            ok bye
+        </pre>
+
+        <!-- 특수문자 처리-->
+        <!-- <p>"특수문자" & <tag></p> -->
+        <!-- &lt; -->
+        &lt;p>
+        <p>&lt;p&gt; &quot;특수문자&quot; &amp; &lt;tag&gt;&lt;&#47;p&gt;</p>
+
+        <!-- block요소 : 행끝까지 영역 hn, p, pr,……-->
+        <!-- inline요소 : 컨텐츠 부분영역으로 사용 a, strong…… -->
+        <strong>안녕</strong> <!-- strong 글자굵게-->
+        <strong>ㅋㅋㅋㅋ</strong>
+
+        <!-- phrase tag : html5 semantic tag 중 일부. 태그의 의미에 따라 내용을 작성해야함.-->
+        <!-- 스크린리더가 해석할때 적절한 문맥을 제공할 수 있다. -->
+        <strong>bold체로 강조할 내용을 작성</strong> <br>
+        <!-- <em></em> -->
+        <em>이탤리체로 기울여서 강조할 내용을 작성</em><br>
+        <del>취소선을 의미하는 내용</del> <br>
+        <mark>형광펜 효과로 강조하는 내용</mark> <br>
+        <ins>isertied 밑줄을 삽입해서 강조</ins> <br>
+        <abbr title="Internet of Tings">IoT</abbr>란 각종 사물에 센서와 통신기능을 추가한 제품 <br>
+        <!-- br*20 == br이 20개 자동작성 -->
+        System.out.println("Hello World");<br>
+        <p>
+        <code>System.out.println("Hello World");</code>입니다.<br>
+        </p><br>
+        <p>
+            이번내용은<mark><em><strong>아주 중요합니다.</strong></em></mark> 
+        </p><br>
+        <br>
+        
+    </body>
+</html>
