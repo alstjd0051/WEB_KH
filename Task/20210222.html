@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>2021.02.22숙제</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>납품자 정보</legend>
+        <br>
+        <ol>
+            <li>납품자명(필수) : <input type="text" name="delivery" id="delivery" required></li>
+            <br>
+            <li>email(필수) : <input type="text" name="memberName" id="memberName"></li><br>
+            <li>홈페이지 : <input type="url" name="deliveryHompage" id="deliveryHompage" value="http://"></li><br>
+            <li>지역 : <select name="Area">
+                    <option value="서울">서울</option>
+                    <option value="서울">인천</option>
+                    <option value="서울">경기</option>
+                    <option value="서울">강원</option>
+                    <option value="서울">충북</option>
+                    <option value="서울">세종</option>
+                    <option value="서울">대전</option>
+                    <option value="서울">충남</option>
+                    <option value="서울">경북</option>
+                    <option value="서울">대구</option>
+                    <option value="서울">울산</option>
+                    <option value="서울">부산</option>
+                    <option value="서울">경남</option>
+                    <option value="서울">전남</option>
+                    <option value="서울">광주</option>
+                    <option value="서울">전북</option>
+                    <option value="서울">충남</option>
+                    <option value="서울">제주</option>
+                </select></li>
+        </ol>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>납품 정보 </legend>
+        <li>상품명(필수) : <input type="text" name="productName" id="productName" required></li><br>
+        <li>납품수량(필수) : <input type="text" name="Delivery quantity" id="Delivery quantity" placeholder="최소 100" required></li><br>
+        <li>납품등급(필수) : <input type="range" name="Delivery grade" id="Delivery grade" max="100" min="0" required></li><br>
+        <li>기타사항 : <textarea name="OtherMatters" id="OtherMatters" cols="30" rows="2"></textarea></li><br>
+    </fieldset>
+    <br>
+    <button type="submit">send message</button>
+</body>
+
+</html>
