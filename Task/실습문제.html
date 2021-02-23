@@ -7,6 +7,9 @@
 
 <body>
     <form action="">
+    </form>
+
+    <form action="">
         <label for="고객명">고객명 : </label>
         <input type="text" name="name" id="userName">
         <br><br>
@@ -24,9 +27,6 @@
             <option value="re">도레미피자</option>
             <option value="Pzshl">피자스쿨</option>
         </select>
-    </form>
-
-    <form action="">
         <fieldset>
             <legend>피자 사이즈(필수)</legend>
             <input type="radio" name="size" id="small" value="small">
@@ -35,7 +35,6 @@
             <label for="Medium">Medium</label><br><br>
             <input type="radio" name="size" id="Large" value="Large">
             <label for="Large">Small</label>
-
         </fieldset>
         <form action="">
             <fieldset>
@@ -55,7 +54,8 @@
             <br>
             <label for="">배송시 요청사항 : </label>
             <textarea name="requested term" id="requested term" cols="30" rows="2"></textarea>
-
+            <br>
+            <input type="submit" value="주문하기">
         </form>
     </form>
 
