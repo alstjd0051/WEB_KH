@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>css - box model</title>
+    <style>
+        /* 마주하는 요소간의 margin값은 큰값으로 처리된다. */
+        #m-collapse {
+            margin-top: 50px;
+        }
+        .test {
+            background-color: rgb(164, 219, 61);
+            width: 200px;
+            height: 200px;
+            border: 10px solid rgb(148, 31, 128);
+            /* border-right: 10px solid lightblue; */
+            margin: 10px auto;
+            padding: 5px;
+            text-align: center;
+            /* padding: 5px 10px; */
+            /* padding : 5px 10px 15px; */
+            /* padding : 5px 10px 15px 20px; */
+            /* padding-top: 5px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            padding-left: 20px; */
+            /* 
+                content : 시작/종료태그 사이의 내용물 width속성
+                padding : 컨텐츠와 border사이의 여백.
+                border : 경계선. 너비를 가진다.
+                margin : border와 다른 요소사이의 여백
+             */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box Model</h1>
+    <div class="test">컨텐츠컨텐츠컨텐츠</div>
+    <div class="test" id="m-collapse">컨텐츠컨텐츠컨텐츠</div>
+
+    <br><br><br>
+    <h3><a href="/02_css/20210223/index.html">Home</a></h3>
+</body>
+
+</html>

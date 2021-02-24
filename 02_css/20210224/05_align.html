@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>allign</title>
+    <style>
+        body {
+            background-color: rgb(133, 133, 177);
+        }
+
+        .wrapper {
+            background-color: rgb(247, 225, 199);
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            /* 방향 순서 : top - right - bottom - left */
+            /* 두개만 썼을때 top/bottom left/right */
+            margin: 10px auto;
+            /* auto로 썼을때는 margin- left = margin-right*/
+        }
+
+        #t-align {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>정렬 align</h1>
+    <!-- 
+        가운데 정렬시
+        1. inline요소 : 부모 block요소에 text-align속성을 지정
+        2. block요소 : 스스로에게 margin속성을 이용해 지정
+     -->
+    <!-- div.wrapper>span -->
+    <div class="wrapper">
+        <h3>
+            하하하
+        </h3>
+        <span>
+            안녕하세요 :)
+        </span>
+    </div>
+    <h1>텍스트 정렬</h1>
+    <p id="t-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae tenetur iure inventore soluta, illum
+        consequatur ullam magni beatae facere veritatis quibusdam sit corporis debitis nobis rem accusamus perspiciatis,
+        similique rerum.</p>
+        <h3><a href="/02_css/20210223/index.html">Home</a></h3>
+</body>
+
+</html>

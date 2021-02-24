@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>paragraph</title>
+    <style>
+        .wrapper p::first-letter {
+            font-size: 2em;
+        }
+
+        /* .wrapper p::first-line {
+            text-decoration: underline;
+        } */
+        /* .wrapper p::before {
+            content: "✨";
+        }
+        .wrapper p::after {
+            content: "😉";
+        } */
+        /* 카운터 */
+        /* 부모요소에서 선언 */
+        .wrapper {
+            counter-reset: num;
+        }
+        .wrapper p::before {
+            counter-increment: num;
+            content: counter(num)". "; /* 점은(.)있으나 없느나 상관X */
+        }
+        
+        ::selection {
+            background-color: brown;
+            color: purple;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>문단</h1>
+    <!-- div.wrapper -->
+    <div class="wrapper">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi aut sint, nam cum adipisci ut earum nulla asperiores, vel fuga voluptatibus consectetur veritatis? Iusto repudiandae aliquam fugiat sint beatae quaerat?</p>
+        <p>Velit, sint qui tenetur quidem autem nam animi ullam libero itaque ab perferendis explicabo nostrum? Provident molestiae et suscipit necessitatibus aperiam magni distinctio asperiores assumenda! Iste nesciunt dolorum veritatis eos!</p>
+        <p>Hic quis qui voluptatem iste voluptas. Nihil, vel porro suscipit saepe est sint pariatur expedita in. Ad ea impedit nam, vitae ipsam cum soluta repellendus excepturi, dolores, libero alias laboriosam!</p>
+        <p>Maiores magnam, sed neque labore, dicta eligendi provident, soluta quasi nostrum consequatur veniam. Culpa quam aut dolor rem asperiores, magnam, dolorem ullam vitae itaque possimus minus magni vero reiciendis odio?</p>
+        <p>Magnam nostrum necessitatibus quod hic cumque quae, libero voluptas illo officiis unde, assumenda explicabo adipisci qui vero corrupti odit vel fuga cum atque officia iure mollitia. Expedita adipisci velit officia.</p>
+      </div>
+      <h3><a href="/02_css/20210223/index.html">Home</a></h3>
+</body>
+
+</html>

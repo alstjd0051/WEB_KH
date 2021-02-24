@@ -16,19 +16,33 @@
             /* 가로offset 세로offset 번짐 color (4개의값지정) */
             text-shadow: 4px 7px 4px purple;
         }
+        div.wrapper {
+            width : 300px;
+            border : 1px solid #000;
+            white-space: nowrap; /* nowrap : 줄바꿈처리 X */
+            overflow: hidden; /* 부모 영역 밖의 자식요소 처리 */
+            text-overflow: ellipsis; /* 말줄임표 */
+        }
     </style>
 </head>
 
 <body>
     <h1>Text관련</h1>
-    <p id="sample">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque tempora minima autem quaerat
+    <p id="sample">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Doloremque tempora minima autem quaerat
         molestiae minus voluptate et tempore quidem eveniet praesentium voluptatibus, illum in modi vel rerum a laborum
         quasi.
     </p>
-
     <h1 id="shadow">그림자</h1>
-    <li><a href="/02_css/20210224/실습문제.html"></a></li>
+    <li><a href="/02_css/20210224/실습문제.html">실습문제</a></li>
+    <br><br><br>
+    <hr>
+    <!-- div.wrapper>p>lorem -->
+    <div class="wrapper">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.  Fugit architecto eaque placeat, cupiditate laborum ducimus aliquam, ut temporibus dicta dignissimos, voluptates laboriosam ad repellat nam veniam? Blanditiis quidem distinctio officiis?
+    </div>
 
+    <h3><a href="/02_css/20210223/index.html">Home</a></h3>
 </body>
 
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>border</title>
+    <style>
+        .test {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: darksalmon;
+            /* border-width: 1px;
+            border-style: solid;
+            border-color: skyblue; */
+            border: 10px solid skyblue;
+            /* border-radius: 10px;*/
+            /*px or % */
+            /* border-radius: 50% 40% 30% 20%; px or % */
+            border-radius: 40% 20%;
+            /* px or % */
+        }
+        .test:hover {
+            box-shadow: 15px 5px 15px 5px royalblue;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 10px solid rgb(180, 180, 39);
+            border-radius: 10px;
+            margin: 10px auto;
+            /* 가로offset 세로offset 번짐 그림자크기 컬러*/
+            box-shadow: 5px 5px 15px 5px lightgreen;
+        }
+        .box:hover{
+            box-shadow: 5px 5px 15px 5px darkmagenta;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Border</h1>
+    <div class="test">
+    </div>
+    <h2>box-shadow</h2>
+    <!-- div.box -->
+    <div class="box"></div>
+    <br><br><br><br>
+    <h3><a href="/02_css/20210223/index.html">Home</a></h3>
+</body>
+
+</html>
