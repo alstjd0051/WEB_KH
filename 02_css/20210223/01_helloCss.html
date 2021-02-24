@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Css</title>
+    <!-- html에 css를 연결하고 싶다면 link태그 필수 -->
+    <link rel="stylesheet" href="/02_css/20210223/style.css">
+    <style>
+        /* #은 선택자 */
+        #p-second {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>HelloCss</h1>
+    <h2>Css 작성하는 3가지 방법</h2>
+    <p style="color: rgb(51, 51, 21);">1. html태그의 공통속성 style에 작성하기(inline에 작성)</p>
+    <p id="p-second">2. 문서내에서 style태그 안에 작성하기</p>
+    <p id="p-third">3. 문서외부에 css파일을 작성하고, 현재문서와 연결하기</p>
+</body>
+</html>

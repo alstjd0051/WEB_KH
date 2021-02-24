@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        /* 태그 선택자 */
+        h1 {
+            color: rgb(36, 38, 46);
+        }
+
+        li {
+            color: rgb(97, 114, 206);
+            background-color: blanchedalmond;
+        }
+
+        /* 아이디 선택자 */
+        #li-js {
+            font-size: 60px;
+            color: hsl(145, 54%, 30%);
+        }
+
+        /* 클래스 선택자 */
+        .favor {
+            background-color: hsl(349, 21%, 64%);
+        }
+
+        /* 선택자 복수개 쌉가능 */
+        h1,
+        .favor {
+            text-decoration: underline;
+        }
+
+        /* 복수개 이상의 클래스 선택자 (AND) */
+        .favor.special {
+            color: burlywood;
+            font-size: 30px;
+        }
+    </style>
+    <hr>
+    <!-- div.wrapper -->
+    <div class="wrapper">
+        <h4>머릿글 h4</h4>
+        <!-- ul#first-ul>li*2 -->
+        <ul id="first-ul">
+            <li>에라이1</li>
+            <li>에라이2</li>
+        </ul>
+        <!-- div#second-div -->
+        <div id="second-div">
+            <h4>머릿글 h4</h4>
+            <!-- ul>li*2 -->
+            <ul>
+                <li>에라이3</li>
+                <li>에라이4</li>
+            </ul>
+        </div>
+    </div>
+    <style>
+        /* 자식태그 */
+        div.wrapper>h4 {
+            color: darkred;
+        }
+
+        /* 후손태그 */
+        div.wrapper h4 {
+            text-decoration: line-through;
+        }
+
+        /* #은 id값  */
+        #first-ul>li {
+            background-color: chartreuse;
+        }
+
+        /* div.wrapper>ul>li {
+            color: rgb(30, 65, 62);
+            background-color: yellow;
+        } */
+    </style>
+    <hr>
+</head>
+
+<body>
+    <h1>선택자</h1>
+    <div>
+        <ul>
+            <li id="li-html5">html5</li>
+            <li>css3</li>
+            <li id="li-js" class="favor">javascript2015</li>
+            <li>jquery</li>
+            <li class="favor">python</li>
+            <li class="favor">node.js</li>
+            <li class="favor special">springframework</li>
+        </ul>
+    </div>
+    <div class="container">
+        <!-- p#p-test${안녕$}*5 -->
+        <p id="p-test1">안녕1</p>
+        <p id="p-test2">안녕2</p>
+        <p id="p-test3">안녕3</p>
+        <p id="p-test4">안녕4</p>
+        <p id="p-test5">안녕5</p>
+        <!-- pre#pre-test6{안녕6} -->
+        <pre id="pre-test6">안녕6</pre>
+    </div>
+    <style>
+        /* 다음 형제요소 하나 */
+        p#p-test2+p {
+            color: cornflowerblue;
+            background-color: blanchedalmond;
+        }
+
+        /* 다음 형제 요소 모두 */
+        /* p#p-test2 ~p {
+            color: dodgerblue;
+            font-size: 24px;
+            class 그룹 이고
+            #id 값
+        } */
+        /* 다음 형제 요소 모두(*) 또는 선택자일치 (p)하는 태그 */
+        p#p-test2~* {
+            color: dodgerblue;
+            font-size: 24px;
+        }
+
+        /* 이전 형제요소를 가리키는 선택자는 없다 */
+    </style>
+    <form action="">
+        <fieldset>
+            <legend>속성관련 선택자</legend>
+            <input type="text"><br>
+            <input type="text" name="user-name"><br>
+            <input type="email" name="user-email"><br>
+            <input type="text" name="petname"><br>
+        </fieldset>
+    </form>
+    <style>
+        /* 속성 선택자라면~ */
+        /* [name] {
+        background-color: bisque;
+    }
+    [name=user-name] {
+        background-color: pink;
+    } */
+        /* 포함 */
+        /* [name*=er] {
+        background-color: skyblue;
+    } */
+        /* 시작 */
+        /* [name^=user] {
+        background: pink;
+    } */
+        /* 끝 */
+        [name$=name] {
+            background: blueviolet;
+        }
+    </style>
+
+    <h2>가상선택자</h2>
+    <!-- div.box -->
+    <div class="box click">click me!</div>
+    <div class="box over">커서를 이동하세요</div>
+    <style>
+        .box {
+            cursor: pointer;
+            border: 2px solid purple;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        /* 클릭했을때 속성 적용 */
+        .click:active {
+            background-color: darkmagenta;
+            color: bisque;
+        }
+
+        /* dashed는 점선 */
+        .over:hover {
+            color: rgb(194, 80, 27);
+            border: 2px dashed lightyellow;
+        }
+    </style>
+    <br><br>
+    <a href="https://www.innerbody.com/htm/body.html">어떤 사이트(방문전 | 방문후 | 커서 | 클릭)</a>
+    <style>
+        a:link {
+            color: rgb(142, 24, 189);
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(15, 15, 15);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: darkgrey;
+        }
+    </style>
+    <br><br><br>
+    <input type="checkbox" name="smsOk" id="smsOk">
+    <label for="smsOk">문자수신</label>
+    <style>
+        input[type=checkbox]:checked {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* 클릭시 글자확대 */
+        input[type=checkbox]:checked+label {
+            font-size: 100px;
+        }
+    </style>
+    <br><br><br>
+    <h2>구조선택자</h2>
+    <!-- div.test>p{테스트$}*10 -->
+    <div class="test">
+        <pre>테스트1</pre>
+        <p>테스트2</p>
+        <p>테스트3</p>
+        <p>테스트4</p>
+        <p>테스트5</p>
+        <p>테스트6</p>
+        <p>테스트7</p>
+        <p>테스트8</p>
+        <p>테스트9</p>
+        <p>테스트10</p>
+    </div>
+    <style>
+        /* p태그이면서 첫번째 자신인 태그 */
+        /* .test p:first-child {
+        background-color: darkgoldenrod;
+        color: blueviolet;
+    }
+    p:first-child {
+        background-color: darkgoldenrod;
+        color: blueviolet;
+    }
+    p:last-child {
+        background-color:brown;
+        color: beige;
+    } */
+        /* 1-based index */
+        /* p:nth-child(2n +1){
+        text-decoration: underline;
+        color: rgb(185, 37, 218);
+        background: rgb(201, 165, 165);
+    } */
+        /* p태그중에서 첫번쨰 태그 */
+        p:first-of-type {
+            color: skyblue;
+            background-color: beige;
+        }
+
+        /* p태그중에서 마지막 태그 */
+        p:last-of-type {
+            color: rgb(16, 27, 78);
+            background-color: rgb(134, 92, 134);
+        }
+
+        /* p태그중에서 5번째 태그 */
+        p:nth-of-type(5) {
+            background-color: blueviolet;
+        }
+
+
+        /* 부정선택자 : not(선택자)
+        선택자 : ex)p:nth-of-type(5)
+        */
+        div.test > :not(p) {
+            font-size : 24px;
+        }
+
+        /* 최상위선택자 : root -> html */
+        :root {
+            background-color: rgb(105, 182, 207);
+        }
+    </style>
+    <a href="/02_css/20210224/우선순위.html"></a>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>우선순위</title>
+</head>
+<body>
+
+    <style>
+    /* 태그 -> 속성 -> 클래스 -> 아이디 -> 인라인속성 -> !important */
+    #mydiv {
+      background-color: thistle;
+    }
+    .test {
+      background-color: bisque;
+      font-size: 24px;
+    }
+    .wrapper .test {
+      font-size: 36px;
+    }
+    div {
+      width: 500px;
+      height: 500px;
+      background-color: aquamarine !important;
+    }
+    </style>
+</body>
+</html>

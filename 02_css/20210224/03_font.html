@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>css - font</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    CSS rules to specify families
+    <style>
+        p {
+            font-size: 32px;
+            font-family: "돋움체";
+        }
+
+        .wrpper {
+            font-size: 32px;
+        }
+
+        ul {
+            font-weight: 200;
+        }
+
+        #ff1 {
+            /* (왼쪽부터)우선순위가 높다. 오른쪽 끝에는 generic-family라는 기본 서체*/
+            /* generic-family = self| sans-serif | cursive | monospaced */
+            font-family: "휴먼모움T", "궁서체";
+            font-size: 32px;
+            /* px : 절대값 단위 */
+        }
+
+        #ff2 {
+            font-family: 'Black Han Sans', sans-serif;
+            font-size: 2em;
+            /* em : 상대값 단위 (가장 가까운 부모요소 기준)
+                    1em = 16px */
+        }
+
+        #ff3 {
+            font-family: 'Black Han Sans', sans-serif;
+            font-size: 150%;
+            /* % : 상대값단위(가장 가까운 부모요소 기준) */
+
+        }
+
+        /* casecade 부모태그에 적용한 속성이 자식(후손)태그로 전이되어서 처리됨 */
+
+        #li1 {
+            font-weight: lighter;
+        }
+
+        #li2 {
+            font-weight: bold;
+        }
+
+        #li3 {
+            font-weight: bolder;
+        }
+
+        span#font {
+            /* font-style font-variant font-weight font-size/line-height font-family */
+            font: italic bold 24px/30px 'Noto Sands KR';
+        }
+    </style>
+</head>
+
+<body>
+    <div clss="wrapper">
+        <h1>Font</h1>
+        <!-- p#ff1 -->
+        <p id="ff1">가나다라마바사 abcdefg ABCDEFG 1234567890</p>
+        <p id="ff2">가나다라마바사 abcdefg ABCDEFG 1234567890</p>
+        <p id="ff3">가나다라마바사 abcdefg ABCDEFG 1234567890</p>
+    </div>
+    <hr>
+    <ul>
+        <li id="li1">글꼴 얇게</li>
+        <li id="li2">글꼴 두껍게</li>
+        <li id="li3">글꼴 더두껍게</li>
+        <span id="font">안녕하세요 ABCDEFG abcdefg 1234567890</span>
+    </ul>
+</body>
+
+</html>
