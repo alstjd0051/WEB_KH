@@ -1,38 +1,38 @@
 #container {
-  background-color: rgb(199, 145, 106);
-  width: 850px;
-  height: 230px;
-  overflow: hidden;
-  text-align: center;
+    background-color: rgb(199, 145, 106);
+    width: 850px;
+    height: 230px;
+    overflow: hidden;
+    text-align: center;
 }
 
 img {
-  width: 250px;
-  height: 200px;
+    width: 250px;
+    height: 200px;
 }
 
 .prod-list {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 li {
-  display: inline-block;
+    display: inline-block;
 }
 
 .caption {
-  width: 250px;
-  height: 200px;
-  background-color: black;
-  opacity: 0.7;
-  z-index: 9999;
-  transition: 1s;
+    width: 250px;
+    height: 200px;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 9999;
+    transition: 1s;
 }
 
 .caption>* {
-  color: white;
-  opacity: 1;
+    color: white;
+    opacity: 1;
 }
 
 img:hover+* {
-  transform: translateY(-230px);
+    transform: translateY(-230px);
 }
