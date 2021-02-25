@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>css - display</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            color: white;
+        }
+
+        .box1 {
+            background-color: skyblue;
+        }
+
+        .box2 {
+            background-color: rgb(69, 153, 187);
+        }
+
+        .box3 {
+            background-color: rgb(45, 137, 173);
+        }
+
+        .box4 {
+            background-color: rgb(35, 107, 136);
+        }
+
+        .box5 {
+            background-color: rgb(24, 89, 116);
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .inline-block {
+            /* block처럼 width/height 적용. inline요소처럼 한행으로 배치 */
+            display: inline-block;
+        }
+
+     
+    </style>
+    <style>
+       .display-none {
+            display: none;
+        }
+
+        .visibility-hidden {
+            visibility: hidden;
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>display</h1>
+    <h2>inline요소</h2>
+    <!-- div.box.box${테스트$}*5 -->
+    <div class="box box1 inline-block">테스트1</div>
+    <div class="box box2 inline-block">테스트2</div>
+    <div class="box box3 inline-block">테스트3</div>
+    <div class="box box4 inline-block">테스트4</div>
+    <div class="box box5 inline-block">테스트5</div>
+
+
+    <h2>block요소</h2>
+    <!-- span.box.box${span$}*5 -->
+    <span class="box box1 block">span1</span>
+    <span class="box box2 block">span2</span>
+    <span class="box box3 block">span3</span>
+    <span class="box box4 block">span4</span>
+    <span class="box box5 block">span5</span>
+
+    <hr>
+    <h2>숨김처리</h2>
+    <!-- div.box$*3 -->
+    <div class="box box1"></div>
+    <hr>
+    <div class="box box2"></div>
+    <hr>
+    <div class="box box3"></div>
+    <hr>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>css - background</title>
+    <style>
+        #bg {
+            width: 100%;
+            height: 800px;
+            border: 1px solid black;
+            /* 16:9 비율 9 나누기 6 */
+            background-image: url('/이미지배포/image/bgsample.PNG');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment */
+            /* 위에는 모아쓰기시쓰는것. 포지션과 사이즈를 모아쓸땐 슬레쉬를 써서 사용한다. :: 위아래는 동일함.*/
+            /* background: url('/이미지배포/image/bgsample.PNG') center center/cover no-repeat fixed; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Background</h1>
+    <!--
+        backround - color :배경색 
+        backround - image : 배경이미지 url(경로)
+        backround - repeat :배경이미지의 x/y축 반복 repeat-x | repeat - y | no-repeat
+        backround - posibion : 배경이미지의 위치 left | right | center, top | bottom | center
+        backround - size : 
+            contain(x/y축중에 한쪽이 꽉찰때까지 확대/축소) }  
+            cover(영역을 모두 채울수 있도록 /확대/축소, 이미지가 짤릴 수있다.) 
+        backround-attachement :
+            scroll : 페이지스크롤시 영역과 함께 스크롤됨.
+            fixed : 영역과 별개로 화면에 고정.
+        backround-clip : 배경영역 border-box | padding-box | content-box
+        backround-origin : 배경이미지의 시작위치 boredr-box | padding-box | content-box
+     -->
+    <!-- div#bg -->
+
+    <div id="bg">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

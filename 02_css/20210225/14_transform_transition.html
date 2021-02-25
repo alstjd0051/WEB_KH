@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>css - transform | transition</title>
+    <style>
+        .wrapper {
+            text-align: center;
+        }
+
+        .wrapper img {
+            width: 250px;
+        }
+
+        .transform-translate:hover {
+            /* 하나의 상태를 표현 */
+            /* transform: translateX(50px);
+            transform: translateY(50px); */
+            transform: translate(50px, 50px);
+            border: 10px solid black;
+        }
+
+        .transform-scale:hover {
+            transform: scale(1.5, 1.5);
+        }
+
+        .transform-rotate:hover {
+            transform: rotate(90deg);
+        }
+
+        .transition {
+            transition-duration: 1s;
+            /* transition 적용할 속성. 기본값 all */
+            transition-property: all;
+            /* transition-delay: .5s; */
+            /*확실히 내취향 X*/
+            transition-timing-function: ease-in-out;
+        }
+        .title {
+            width: 380px;
+            height: 380px;
+            margin: 10px;
+            padding: 30px;
+            background-color: rgb(140, 176, 209);
+            box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, .4);
+            color: rgb(197, 231, 181);
+            overflow: hidden;
+            display: inline-block;
+        }
+        .title h1 {
+            font-weight: 200;
+            text-shadow: 2px 2px 10px rgb(211, 184, 144);
+        }
+        .title h2 {
+            font-weight: 200px;
+            margin: 20px 0 0 0;
+            font-style: italic;
+            transform: translateX(380px);
+        }
+        .title p {
+            font-weight: 200px;
+            margin: 20px 0 0 0;
+            transform: translateX(-380px);
+            transition-delay: .2s;
+        }
+        .text-transition {
+            opacity: .2;
+            transition: all .6s ease-out;
+        }
+        .title:hover {
+            box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, .8);
+        }
+        .title:hover .text-transition {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .img-wrapper {
+            width: 300px;
+            padding: 5px;
+            border: 1px solid darkgray;
+            overflow: hidden;
+            text-align: center;
+        }
+        .img-wrapper img {
+            width: 100%;
+            transition: .5s;
+        }
+        .img-wrapper:hover img {
+            transform: scale(1.2, 1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>transform | transition</h1>
+    <!-- 
+        1.tranform
+            변화, 하나의 상태를 연출시킬수있다. A-> B 변화시키는시간이 0초
+        2.transition
+            두가지상태는 똑같으나 소요시간이있다.
+        3.animation
+     -->
+    <div class="wrapper">
+        <img src="/sample/image/flower1.PNG" class="transform-translate">
+        <hr>
+        <img src="/sample/image/flower2.PNG" class="transform-scale">
+        <hr>
+        <img src="/sample/image/flower3.PNG" class="transform-rotate">
+        <hr>
+    </div>
+    <br><br><br>
+
+    <h1>transition</h1>
+    <div class="wrapper">
+        <img src="/sample/image/flower1.PNG" class="transition transform-translate">
+        <hr>
+        <img src="/sample/image/flower2.PNG" class="transition transform-scale">
+        <hr>
+        <img src="/sample/image/flower3.PNG" class="transition transform-rotate">
+        <hr>
+    </div>
+    <div class="title">
+        <h1>코로나19바이러스</h1>
+        <h2 class="text-transition">코로나19 드디어....? <br> 백신으로</h2>
+        <p class="text-transition">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid sit aliquam iste deleniti veniam quo
+            quaerat? Animi sit, necessitatibus, aliquam eveniet molestias tempore rem voluptatem cum nulla inventore
+            officiis.</p>
+    </div>
+    <div class="title">
+        <h1>코로나19바이러스</h1>
+        <h2 class="text-transition">코로나19 드디어....? <br> 백신으로</h2>
+        <p class="text-transition">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid sit aliquam iste deleniti veniam quo
+            quaerat? Animi sit, necessitatibus, aliquam eveniet molestias tempore rem voluptatem cum nulla inventore
+            officiis.</p>
+    </div>
+    <div class="title">
+        <h1>코로나19바이러스</h1>
+        <h2 class="text-transition">코로나19 드디어....? <br> 백신으로</h2>
+        <p class="text-transition">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid sit aliquam iste deleniti veniam quo
+            quaerat? Animi sit, necessitatibus, aliquam eveniet molestias tempore rem voluptatem cum nulla inventore
+            officiis.</p>
+    </div>
+    <div class="title">
+        <h1>코로나19바이러스</h1>
+        <h2 class="text-transition">코로나19 드디어....? <br> 백신으로</h2>
+        <p class="text-transition">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid sit aliquam iste deleniti veniam quo
+            quaerat? Animi sit, necessitatibus, aliquam eveniet molestias tempore rem voluptatem cum nulla inventore
+            officiis.</p>
+    </div>
+    <br><br><br>
+    <div class="img-wrapper">
+        <img src="/sample/image/hyunta.jpg" alt="">
+    </div>
+</body>
+
+</html>

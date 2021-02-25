@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>posisition</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>posisition</h1>
+    <!-- 
+        static : 기본값. 문서내 작성된 순서대로 배치. offset값 무시.
+        relative : 문서내 작성된 순서대로 배치. offset값 적용.
+        absolute : 가장 가까운 position: relative 부모요소 기준으로 offset값 적용.
+        fixed : viewport기준으로 offset값 적용
+     -->
+    <style>
+        .outer {
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+
+        .first {
+            width: 300px;
+            height: 300px;
+            background-color: thistle;
+        }
+
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            top: 50px;
+            left: 50px;
+        }
+
+        .third {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            top: 100px;
+            left: 100px;
+        }
+
+        .position-relative {
+            position: relative;
+        }
+
+        .position-absolute {
+            position: absolute;
+        }
+
+        .position-fixed {
+            position: fixed;
+        }
+
+        .box {
+            width: 150px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .box1 {
+            background-color: lightcoral;
+            z-index: 10;
+        }
+
+        .box2 {
+            background-color: rgb(197, 87, 87);
+            top: 20px;
+            left: 20px;
+            z-index: 5;
+        }
+
+        .box3 {
+            background-color: lightsalmon;
+            top: 40px;
+            left: 40px;
+            z-index: 1;
+        }
+    </style>
+    <h2>static</h2>
+    <!-- .outer>.first+.second+.third -->
+    <div class="outer">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+    </div>
+    <br><br><br>
+    <h2>relative</h2>
+    <div class="outer">
+        <div class="first"></div>
+        <div class="second position: relative"></div>
+        <div class="third position: relative"></div>
+    </div>
+    <br><br><br>
+    <h2>absoute</h2>
+    <div class="first position-relative"></div>
+    <div class="second position-absolute"></div>
+    <div class="third position-absolute"></div>
+
+    <h2>fixed</h2>
+    <div class="third position-fixed"></div>
+
+
+
+    <h2>z-index</h2>
+    <!-- z축기준으로 요소를 배치. position:static에서는 사용불가 -->
+    <!-- z-index가 명시되지 않으면, 문서상 나중에 작성된 것이 z-index가 더 높은 -->
+    <!-- div.wrapper>.box.box${테스트$}*3 -->
+    <div class="wrapper position-relative">
+        <div class="box box1 position-absolute">테스트1</div>
+        <div class="box box2 position-absolute">테스트2</div>
+        <div class="box box3 position-absolute">테스트3</div>
+    </div>
+</body>
+
+</html>
