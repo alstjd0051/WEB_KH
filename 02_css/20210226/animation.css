@@ -1,0 +1,55 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+    border: 3px solid black;
+    margin: 0 auto;
+
+    animation-name: my-first-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: ease-out;
+}
+
+/* animation 속성 */
+/* 
+        @keyframes 이름 : 각각의 상태를 작성 (0%~100%) 
+        animation-name : @keyframes의 이름을 지정
+        animation-delay : 지연시간
+        animation-direction : nomal | reverse | alternate | alternate-reverse
+        animation-interation-count : 반복횟수 | infinite
+        animation-duration : 실행시간
+        animation-timing-function : 속도곡선
+        animation-fillmode : 시작전후 상태 forwards | backwards | both
+    */
+    @keyframes my-first-animation {
+    25% {
+        transform: translate(100px, 0);
+    }
+
+    50% {
+        transform: translate(100px, 100px);
+    }
+
+    75% {
+        transform: translate(0, 100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        width: 300px;
+        height: 300px;
+    }
+
+
+}
+.wrapper {
+    text-align: center;
+
+}
+#img-hyunta {
+    width: 200px;
+    animation-name: my-first-animation;
+    animation-duration: 3s;
+}

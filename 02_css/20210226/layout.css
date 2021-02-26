@@ -1,0 +1,34 @@
+div {
+    padding: 10px;
+}
+
+#container {
+    background-color: rgb(128, 103, 72);
+    width: 960px;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: blueviolet;
+    height: 100px;
+}
+
+#content {
+    background-color: aquamarine;
+    width: 640px;
+    height: 400px;
+    float: left;
+}
+
+#sideinfo {
+    background-color: rgb(142, 179, 74);
+    width: 280px;
+    height: 400px;
+    float: left;
+}
+
+#footer {
+    clear: both;
+    background-color: cornflowerblue;
+    height: 100px;
+}
