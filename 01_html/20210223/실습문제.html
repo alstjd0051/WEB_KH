@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>잠깐쉬는 실습문제(30분짜리)</title>
+</head>
+
+<body>
+    <form action="">
+    </form>
+
+    <form action="">
+        <label for="고객명">고객명 : </label>
+        <input type="text" name="name" id="userName">
+        <br><br>
+        <label for="PhNum">전화번호(필수) : </label>
+        <input type="text" required>
+        <br><br>
+        <label for="Email">E-mail :</label>
+        <input type="text">
+        <br><br>
+        <label for="Pzchoice">피자선택</label>
+        <label for="Pzchoice">피자를 선택하세요</label>
+        <select name="Pz" id="Pz" required>
+            <option value="first">피자를 선택하세요</option>
+            <option value="do">도미노피자</option>
+            <option value="re">도레미피자</option>
+            <option value="Pzshl">피자스쿨</option>
+        </select>
+        <fieldset required>
+            <legend>피자 사이즈(필수)</legend>
+            <input type="radio" name="size" id="small" value="small">
+            <label for="small">Small</label><br><br>
+            <input type="radio" name="size" id="Medium" value="Medium">
+            <label for="Medium">Medium</label><br><br>
+            <input type="radio" name="size" id="Large" value="Large">
+            <label for="Large">Large</label>
+        </fieldset>
+        <form action="">
+            <fieldset>
+                <legend>토핑선택</legend>
+                <input type="checkbox" name="topping" id="bacon" value="bacontopping">
+                <label for="베이컨">베이컨</label><br>
+                <input type="checkbox" name="topping" id="cheese" value="cheesetopping">
+                <label for="치즈">치즈</label><br>
+                <input type="checkbox" name="topping" id="onion" value="oniontopping">
+                <label for="양파">양파</label><br>
+                <input type="checkbox" name="topping" id="mushroom" value="mushroomtopping">
+                <label for="버섯">버섯</label><br>
+            </fieldset>
+            <br>
+            <label for="reserv">희망 배송 시간 : </label>
+            <input type="time" name="reservation" id="reservation" min="09:00" max="23:00">
+            <br>
+            <label for="">배송시 요청사항 : </label>
+            <textarea name="requested term" id="requested term" cols="30" rows="2"></textarea>
+            <br>
+            <input type="submit" value="주문하기">
+        </form>
+    </form>
+
+</body>
+
+</html>

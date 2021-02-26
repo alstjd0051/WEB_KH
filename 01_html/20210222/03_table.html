@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>table</title>
+    <style>
+        /* css작성 */
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>table</h1>
+    <thead>
+
+        <!--
+            table table관련 최상위 태그
+            thead | tbody | tfoot(행 타입태그)
+            tr 행
+            th 제목셀
+            td 내용셀
+        -->
+        <!-- <table border 는 옛날용>-->
+    </thead>
+    <table>
+        <tbody>
+
+            <tr>
+                <th>브라우져명</th>
+                <th>제조사</th>
+                <th>홈페이지</th>
+            </tr>
+            <tr>
+                <td>크롬</td>
+                <td>구글</td>
+                <td><a href="htt[://google.com">http://google.com</a></td>
+            </tr>
+            <tr>
+                <td>사파리</td>
+                <td>애플</td>
+                <td><a href="http://apple.com">http://apple.com</a></td>
+            </tr>
+            <tr>
+                <td>파이어폭스</td>
+                <td>모질라</td>
+                <td><a href="http://mozilla.org">http://mozilla.org</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>총개수</td>
+                <td colspan="3">3</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th colspan="4">이력서</th>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" style="width:130px; height: 150px;">사진</td>
+            <td style="width: 80px;">이름</td>
+            <td style="width: 200px;">송민성</td>
+        </tr>
+        <tr>
+            <td>연락처</td>
+            <td>010-9697-9971</td>
+        </tr>
+        <tr>
+            <td style="width : 70px; height : 50px">주소</td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td style="height: 100px;">자기소개</td>
+            <td colspan="3"></td>
+        </tr>
+    </table>
+    <br><br><br><br><br>
+<a href="/01_html/20210219/index.html">인덱스 페이지로 이동</a>
+</body>
+
+</html>
