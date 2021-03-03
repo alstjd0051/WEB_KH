@@ -1,0 +1,18 @@
+table {
+    width: 500px;
+    text-align: center;
+  }
+  table, th, td {
+    border: 2px solid #bcbcbc;
+    
+  }
+    td {
+    background-color: yellow;
+  }
+  thead {
+      background: red;
+      color: white;
+  }
+  button {
+    background-color: #49b049;
+  }
