@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element</title>
+    <script src="getElement.js"></script>
+    <style>
+        li {
+            color: red;
+        }
+
+        li:hover {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Get Element</h1>
+    <!-- ul>li#myli$.group{요소}*5 -->
+    <ul>
+        <li id="myli1" class="group">요소1</li>
+        <li id="myli2">요소2</li>
+        <li id="myli3" class="group">요소3</li>
+        <li id="myli4">요소4</li>
+        <li id="myli5" class="group">요소5</li>
+    </ul>
+    <input type="button" value="id" onclick="test1();">
+    <input type="button" value="tag name" onclick="btn2();">
+    <input type="button" value="class name" onclick="btn3();">
+    <fieldset>
+        <legend>취미</legend>
+        <!-- (input:checkbox[name=hobby][value]#hobby$+label[for=hobby$])*3 -->
+        <input type="checkbox" name="hobby" id="hobby1" value="음악감상"><label for="hobby1">hobby</label>
+        <input type="checkbox" name="hobby" id="hobby2" value="">영화시청<label for="hobby2"></label>
+        <input type="checkbox" name="hobby" id="hobby3" value="">게임<label for="hobby3"></label>
+        <br><br>
+        <!-- input:button[onclick] -->
+        <input type="button" value="name" onclick="test4();">
+
+    </fieldset>
+
+    <fieldset>
+        <legend>이메일 입력</legend>
+        <input type="email" name="userEmail" id="userEmail" placeholder="이메일을 입력하세요.">
+        <input type="button" value="확인" onclick="test5();">
+
+    </fieldset>
+    <fieldset>
+        <legend>수량</legend>
+        <input type="range" name="amount" id="amount" min="1" max="100" oninput="test6();" />
+        <span id="result"></span>
+    </fieldset>
+    <!-- table>tr>th -->
+    <table>
+        <tr>
+            <th colspan="3">수강신청</th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <!-- input:checkbox#checkAll -->
+                <input type="checkbox" name="checkbox" id="checkAll" onchange="test7();">
+                <label for="checkAll">모두 선택/해제</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="serious">
+                <!-- input:checkbox[name=subject]#subject0+label[for=subect0] -->
+                <!-- (this용법1) 태그 inline이벤트속성에 명시된 this는 태그객체 자신을 가리킨다. -->
+                <input type="checkbox" name="subject" id="subject0" onclick="test8(this);">
+                <label for="subject0">국어</label>
+            </td>
+            <td class="serious">
+                <input type="checkbox" name="subject" id="subject1" onclick="test8(this);">
+                <label for="subject1">영어</label>
+            </td>
+            <td class="serious">
+                <input type="checkbox" name="subject" id="subject2" onclick="test8(this);">
+                <label for="subject2">수학</label>
+            </td>
+        </tr>
+        <style>
+            table {
+                border: 1px solid #000;
+                border-collapse: collapse;
+                margin: 30px 0;
+            }
+
+            th,td {
+                border: 1px solid #000;
+                padding: 10px;
+                text-align: center;
+            }
+            td.on {
+                background-color: skyblue;
+                color: white;
+            }
+            td.serious {
+                font-family: "궁서", cursive;
+            }
+        </style>
+    </table>
+
+</body>
+
+</html>
