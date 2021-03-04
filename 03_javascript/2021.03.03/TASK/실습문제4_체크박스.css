@@ -1,0 +1,27 @@
+#underline {
+    text-decoration: underline;
+}
+
+table {
+    border: solid gray 1px;
+    border-collapse: collapse;
+}
+
+td {
+    border: solid gray 1px;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+td.title {
+    background-color: ivory;
+    text-align: right;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+span#allChoice {
+    font-size: 8pt;
+    font-style: italic;
+    color: blue;
+}

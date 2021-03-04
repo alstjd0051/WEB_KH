@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>io</title>
+    <script src="04_io.js"></script>
+
+</head>
+
+<body onload="init();">
+    <!-- html문서내 태그는 브라우져가 모두 DOM document으로 등록한다. -->
+    <!-- 모든 태그가 등록되고 나면, load이벤트가 발생! -->
+    <h1>Input | Output</h1>
+    <hr><br><br><br>
+    <input type="button" value="confirm" onclick="test1();">
+    <input type="button" value="confirm" onclick="test2();">
+
+    <h2>innerHTML | innerText | outerHTML</h2>
+    <input type="button" value="innerHTML" onclick="test3();">
+    <input type="button" value="innerText" onclick="test4();">
+    <input type="button" value="outerHTML" onclick="test5();">
+    <div class=" wrapper">
+
+    </div>
+</body>
+
+</html>
