@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>실습문제3</title>
+    <link rel="stylesheet" href="실습문제3_검색_배포.css">
+    <script src="실습문제3_검색_배포.js"></script>
+</head>
+
+<body>
+    <h2>@실습문제3</h2>
+    <fieldset>
+        <legend>검색할 항목을 선택하세요.</legend>
+        <input type="radio" name="category" value="title" onclick="showDiv1();" id="title"><label
+            for="title">제목</label>&nbsp; &nbsp;
+        <input type="radio" name="category" value="date" onclick="showDiv1();" id="date"><label
+            for="date">날짜</label>&nbsp; &nbsp;
+        <input type="radio" name="category" value="writer" onclick="showDiv1();" id="writer"><label
+            for="writer">작성자</label>&nbsp; &nbsp;
+    </fieldset>
+    <hr>
+    <div id="titleBox" class="box">
+        <form method="post" action="">
+            <label> 검색할 제목을 입력하세요 : </label>
+            <br>
+            <input type="search" name="title" size="25"> &nbsp;
+            <input type="submit" value="검색">
+        </form>
+    </div>
+    <div id="dateBox" class="box">
+        <form method="post" action="">
+            <label> 검색할 날짜를 선택하세요 : </label>
+            <br>
+            <input type="date" name="start"> -
+            <input type="date" name="end"> &nbsp;
+            <input type="submit" value="검색">
+        </form>
+    </div>
+    <div id="writerBox" class="box">
+        <form method="post" action="">
+            <label> 검색할 작성자 아이디를 입력하세요 : </label>
+            <br>
+            <input type="search" name="writer" size="25"> &nbsp;
+            <input type="submit" value="검색">
+        </form>
+    </div>
+    <img src="/03_javascript/2021.03.05/실습문제3.검색.gif" alt="">
+</body>
+
+</html>

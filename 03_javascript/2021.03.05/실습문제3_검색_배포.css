@@ -1,0 +1,12 @@
+fieldset {
+    text-align: center;
+    width: 500px;
+}
+
+div {
+    background-color: rgb(251 201 0);
+    text-align: center;
+    width: 50vw;
+    padding: 1vw;
+
+}
