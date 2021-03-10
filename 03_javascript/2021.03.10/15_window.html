@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js - Window</title>
+    <script src="Window.js"></script>
+    <style>
+        #clock {
+        font-size : 3em;
+        text-shadow : 3px 3px 7px #000;
+        }
+        #countdown {
+            border: 3px solid black;
+            font-size: 30em;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload ="test5();">
+    <h1>Window객체</h1>
+    <hr>
+    <h2>웹페이지 구조</h2>
+    <img src="/03_javascript/2021.03.10/windowObjects.png" alt="">
+    <h2>Method</h2>
+    <input type="button" value="open" onclick="test1();">
+    <input type="button" value="popup 닫기" onclick="test2();">
+    <input type="button" value="setTimeout" onclick="test3();">
+    <input type="button" value="실습문제" onclick="test4();">
+    <input type="button" value="setInterval" onclick="test5();">
+    <input type="button" value="countdown" onclick="test6();">
+    <hr>
+    <div id="clock">16:55:23</div>
+    <div id="countdown"></div>
+    <h2>BOM</h2>
+    <h3>Browser Object Model</h3>
+    <input type="button" value="navigator" onclick="test7();">
+    <input type="button" value="location" onclick="test8();">
+    <input type="button" value="history" onclick="test9();">
+    <input type="button" value="screen" onclick="test10();">
+    <hr>
+    <h2>DOM</h2>
+    <input type="button" value="Node" onclick="test11();">
+</body>
+
+</html>
