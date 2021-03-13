@@ -32,7 +32,25 @@
     <input type="button" value="escaping" onclick="test10();">
     <input type="button" value="* + ?" onclick="test11();">
     <input type="button" value="{n,m}" onclick="test12();">
+    <hr>
+    <p>
+        @실습문제 : 주민번호 정규표현식 <br>
+        다음과 같은 input태그에서 주민번호를 체크하는 정규표현식을 작성해서, 유효한지 아닌지 alert를 통해 처리할세요.
+    <pre>900909-1234566</pre>
+    </p>
+    <label>주민번호 입력 : </label>
+    <input type="text" id="ssn">
+    <button type='button' onclick="testSSN();">실행확인</button>
     <div id="area"></div>
+
+    <input type="button" value="look around" onclick="test13();">
+    <form action="">
+        <legend>
+            아이디유효성검사
+        </legend>
+        <input type="text" id="userId" name="userId" placeholder="아이디">
+        <input type="submit" value="제출">
+    </form>
 </body>
 
 </html>

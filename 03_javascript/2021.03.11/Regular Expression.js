@@ -251,3 +251,64 @@ function test12() {
         console.log(re.test(s)); // false
     });
 };
+
+function testSSN() {
+    var val = ssn.value;
+    // var re = /^\d\d\d\d\d\d-\d\d\d\d\d\d\d$/;
+    // var re = /^\d{6}-\d{7}$/;
+    // var re = /^\d{6}-[1234]\d{6}$/; // 999893-1234567
+    var re = /^\d{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])-[1234]\d{6}$/;
+
+    if (re.test(val))
+        alert('유효한 주민번호입니다.');
+    else
+        alert('주민번호가 유효하지 않습니다.');
+
+}
+/**
+ * Look Around : 문자열 검사후 최종패턴에는 포함되지 않는다.
+ * 
+ * 1. look ahead
+ *   - 000(?=(re)) : 000다음 re일치
+ *   - 000(?!(re)) : 000다음 re일치하지 않아야함. 000만 최종반환
+ * 2. look behind
+ *   - (?<=(re))000 : 000이전 re 일치. 000만 최종반환
+ *   - (?<!(re))000 : 000이전 re일치하지 않아야함. 000만 최종 반환
+ */
+function test13() {
+    var s = "hello world hello Tom hello Jane";
+    // area.innerHTML = s.replace(/hello(?=( world))/g, '<mark>$&</mark>');
+    // area.innerHTML = s.replace(/hello(?!\sworld)/g, '<mark>$&</mark>');
+    s = "hello wolrd lotte world t world"
+    // area.innerHTML = s.replace(/(?<=hello )world/g, '<mark>$&</mark>');
+    area.innerHTML = s.replace(/(?<=hello )world/g, '<mark>$&</mark>');
+
+}
+
+
+/**
+ * userId가 8~12자리, 영문자/숫자/특수문자 하나이상 포함, 영문자로 시작할때만 유효하다.
+ * 유효하지 않다면, 폼이 제출되어서는 안된다.
+ */
+document.querySelector("form").onsubmit = function () {
+    var val = userId.value;
+    //1.userId가 8~12자리 
+    if (/^.{8,12}$/.test(val) == false) {
+        alert("아이디는 8~12자리여야 합니다.");
+        return false;
+    }
+    //2.영문자/숫자/특수문자 *!^/@$ 하나이상 포함
+    if (
+        ((/[a-zA-Z]/.test(val)) &&
+            (/[0-9]/.test(val)) &&
+            (/[*!^/@$]/.test(val))) == false
+    ) {
+        alert("아이디는 영문자/숫자/특수문자 *!^/@$ 하나이상 포함해야 합니다.");
+        return false;
+    }
+    //3.영문자로 시작
+    if (/ /.test(val) == false) {
+        alert("아이디는 영문자로 시작해야 합니다.");
+        return false;
+    }
+};
