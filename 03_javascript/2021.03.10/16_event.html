@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js - event</title>
-    
     <script>
         /**
          * 현재페이지 모든 설정이 끝난후 load이벤트발생
@@ -19,7 +18,7 @@
     </script>
 </head>
 
-<body>
+<body data-text="body" onclick="displayMsg(this);">
     <h1>Event</h1>
     <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">W3Schools - HTML DOM Events</a>
     <h2>Event Handler Binding</h2>
@@ -42,18 +41,6 @@
 
     <h2>Event | Event Target</h2>
     <div class="box" onclick="test2(event);"></div>
-    <script>
-        /**
-         * html태그 inlline속성으로 핸들러를 호출하는 경우,
-         * 이 함수는 일반함수이고, this는 Window객체를 가리킨다.
-         */
-
-        function test2(e) {
-            console.log(e);
-            console.log(e.target == this); // false
-            console.log(this);
-        }
-    </script>
     <style>
         .box {
             width: 100px;
@@ -66,9 +53,18 @@
     </style>
     <script>
         /**
+         * html태그 inline속성으로 핸들러를 호출하는 경우,
+         * 이 함수는 일반함수이고, this는 Window객체를 가리킨다.
+         */
+        function test2(e) {
+            console.log(e);
+            console.log(e.target == this); // false
+            console.log(this);
+        }
+
+        /**
          * Event객체 : 발생한 이벤트관련 모든 정보를 가진 객체
          *             이벤트핸들러함수의 인자로 전달이 됨.
-         * 
          * Event Taget객체 : 이벤트발생객체. Event객체의 target속성값.
          */
         document.querySelector(".box").onmouseover = function (e) {
@@ -79,6 +75,7 @@
             this.innerHTML = "안녕";
             //(this용법5) event handler안에서 this는 event target객체를 가리킨다.
         };
+
         /**
          * mouseover <---> mouseout
          */
@@ -131,7 +128,6 @@
             </table>
         </fieldset>
     </form>
-
     <script>
         /**
          * 사용자 입력값 유효성검사
@@ -144,6 +140,7 @@
                 userId.select();
                 return false;
             }
+
             //2.비밀번호
             if (pwd.value.length < 4) {
                 alert("유효한 비밀번호를 입력하세요.");
@@ -151,10 +148,54 @@
                 return false;
             }
 
-            //위의 유효성검사를 통과했다면, submit할 수 있다.
+            //위의 유효성검사를 통과했다면, submit할수 있다.
             return true;
         };
     </script>
+
+    <h2>Event Propagation - Bubbling</h2>
+    <!-- div.boxx.box$[data-text=box$]*3 -->
+    <div class="boxx box1" data-text="box1" onclick="displayMsg(event, this);">
+        <div class="boxx box2" data-text="box2" onclick="displayMsg(event, this);">
+            <div class="boxx box3" data-text="box3" onclick="displayMsg(event, this);"></div>
+        </div>
+    </div>
+    <style>
+        .boxx {
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .box1 {
+            background-color: yellowgreen;
+        }
+
+        .box2 {
+            background-color: green;
+        }
+
+        .box3 {
+            background-color: springgreen;
+        }
+    </style>
+    <script>
+        function displayMsg(e, boxx) {
+            console.log(boxx.dataset.text);
+            
+            //전파 방지
+            e.stopPropagation();
+        }
+
+  // document.querySelectorAll(".boxx").forEach(function(boxx, i){
+  //   boxx.addEventListener('click', function(e){
+  //     console.log(e.target.dataset.text);
+  //   });
+  // });
+    </script>
+
+
+
+
 </body>
 
 </html>
