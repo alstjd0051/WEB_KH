@@ -1,0 +1,26 @@
+table#enroll {
+    border: 1px solid;
+    border-spacing: 10px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+table#enroll th {
+    text-align: right;
+}
+
+table#enroll td.btn-wrapper {
+    text-align: center;
+}
+
+.phone {
+    width: 30px;
+}
+
+span.req {
+    color: red;
+}
+
+.short {
+    width: 50px;
+}
