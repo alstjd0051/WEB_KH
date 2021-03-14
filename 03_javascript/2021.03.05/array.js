@@ -262,18 +262,69 @@ var test12 = function () {
  * 
  */
 
+/**
+   * prompt를 이용해 사용자의 취미리스트를 입력받으세요.
+   * 예) 농구,수영,캠핑,낚시
+   * ,구분자로 잘라서 배열로 담은후, 
+   * 사전순 정렬이후, ul#hobby-list의 자식li태그로 추가하세요.
+   */
 var test13 = function () {
-    var str = prompt("취미를 입력하세요(쉼표(,)로 구별)");
-    var arr = str.split(",");
-    arr.sort(function (a, b) {
-        if (a > b) return 1;
-        if (a < b) return -1;
-        return 0;
-    });
-    console.log(arr);
-    var ul = document.querySelector("ul#hobby-list");
-    for (var i = 0; i < arr.length; i++) {
-        ul.innerHTML += "<li>" + arr[i] + "</li><br>";
+    var hobbies = prompt("취미를 입력하세요. 예)농구,수영,캠핑,낚시");
+
+    // null, "" 일때는 조기리턴처리
+    if (!hobbies) {
+        alert("입력값이 유효하지 않습니다.");
+        return;
     }
 
-}
+    var arr = hobbies.split(",");
+    arr.sort();
+    console.log(arr);
+
+    var result = document.querySelector("ul#hobby-list");
+
+    //배열 요소마다 콜백함수를 실행
+    //f("농구", 0)
+    //f("수영", 1)
+    //f("캠핑", 2)
+    //f("낚시", 3)
+    arr.forEach(function (food, idx) {
+        result.innerHTML += "<li>" + food + "</li>";
+    });
+
+};
+/**
+   * arr.forEach(callbackFunction(element, index){
+   *    //요소마다 실행구문
+   * })
+   * 
+   * 유사배열도 사용가능.
+   */
+var test14 = function () {
+    var arr = [1, 2, 3, 4, 5];
+    var sum = 0;
+    arr.forEach(function (elem, i) {
+        console.log(i, elem);
+        sum += elem;
+    });
+    // alert(sum);
+
+    var btnValues = [];
+    document.querySelectorAll("input[type=button]").forEach(function (elem, i) {
+        console.log(i, elem);
+        btnValues.push(elem.value);
+    });
+    console.log(btnValues);
+};
+/**
+ * 배열 drink #drink태그의 자식 li태그 텍스트를 추가할 것.
+ */
+ var test15 = function () {
+    var drinks = [];
+    /**배열요소*/
+    document.querySelectorAll("#drink > li").forEach(function (elem, i) {
+        drinks.push(elem.innerText);
+        //읽어오기
+    });
+    console.log(drink);
+};

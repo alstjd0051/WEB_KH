@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>실습문제 1</title>
 	<link rel="stylesheet" href="실습문제1.css">
+	<script src="실습문제_구매정보.js"></script>
 </head>
 
 <body>
@@ -25,20 +26,6 @@
 	<br>
 	<br>
 	<div id="area"></div>
-	<script type="text/javascript">
-		function printValue() {
-			var nameTF = document.getElementsByTagName("input");
-			var userName = nameTF[0].value;
-			var productName = document.getElementById("pname").value;
-			var priceTF = document.getElementsByName("price");
-			var price = priceTF[0].value;
-
-			var area = document.getElementById("area");
-			area.innerHTML = "구입자 : " + userName + "님<br>";
-			area.innerHTML += "구입상품 : " + productName + "<br>";
-			area.innerHTML += "구매가격 : " + price + "만원"
-		}
-	</script>
 </body>
 
 </html>
