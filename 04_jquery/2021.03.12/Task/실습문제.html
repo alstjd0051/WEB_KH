@@ -1,113 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>유효성검사</title>
-    <link rel="stylesheet" href="실습문제.css">
-    <script src="실습문제.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>jQuery_01_base_selector_실습</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>    
 </head>
-
 <body>
-    <h3>회원가입 유효성검사</h3>
-    <p>
-        회원가입시 각 필드마다 유효성 검사를 하여 처리 할 수 있도록 만들어라. <br>
-        1. ID는 영어소문자,숫자만 가능해야함(4~12자리,소문자로 시작해야함) <br>
-        2. 비밀번호는 숫자/문자/특수문자*!& 포함 형태의 8~15자리<br>
-        3. 비밀번호와 비밀번호확인은 같아야 함<br>
-        4. 이름은 무조건 한글만 가능해야 함(최소2글자 이상)<br>
-        5. 주민번호는 자릿수6자리,7자리이고, 모두 숫자여야함.<br>
-        6. 이메일은 @가 포함 되어야 함(@앞에가 영문자,숫자로 4~12글자 ) <br>
-        7. 전화번호는 첫번째 필드는 010만 입력 가능 해야 함 <br>
-        두번째 필드는 3자리 이상 입력 해야 함 <br>
-        세번째 필드는 무조건 4자리 입력 해야함 <br>
-        (모두 숫자만 가능 해야함) <br>
-    </p>
-    <form action="javascript:alert('제출성공');" name="memberFrm">
-        <table id="enroll">
-            <tr>
-                <th>아이디<span class="req">*</span></th>
-                <td>
-                    <input type="text" name="userId" id="userId">
-                </td>
-            </tr>
-            <tr>
-                <th>비밀번호<span class="req">*</span></th>
-                <td>
-                    <input type="password" name="pwd" id="pwd">
-                </td>
-            </tr>
-            <tr>
-                <th>비밀번호확인</th>
-                <td>
-                    <input type="password" id="pwdCheck">
-                </td>
-            </tr>
-            <tr>
-                <th>이름<span class="req">*</span></th>
-                <td>
-                    <input type="text" name="userName" id="userName">
-                </td>
-            </tr>
-            <tr>
-                <th>주민번호<span class="req">*</span></th>
-                <td>
-                    <input type="text" name="ssn1" id="ssn1" class="short">-
-                    <input type="password" name="ssn2" id="ssn2" class="short">
-                </td>
-            </tr>
-            <tr>
-                <th>이메일<span class="req">*</span></th>
-                <td>
-                    <input type="email" name="email" id="email">
-                </td>
-            </tr>
-            <tr>
-                <th>전화번호<span class="req">*</span></th>
-                <td>
-                    <input type="text" name="tel1" id="tel1" class="phone">-
-                    <input type="text" name="tel2" id="tel2" class="phone">-
-                    <input type="text" name="tel3" id="tel3" class="phone">
-                </td>
-            </tr>
-            <tr>
-                <th>직업</th>
-                <td>
-                    <select name="job" id="job">
-                        <option value="공무원">공무원</option>
-                        <option value="개발자">개발자</option>
-                        <option value="무직">무직</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <th>취미</th>
-                <td>
-                    <input type="checkbox" name="hobby" id="hobby1" value="reading">
-                    <label for="hobby1">독서</label>
-                    <input type="checkbox" name="hobby" id="hobby2" value="development">
-                    <label for="hobby2">개발</label>
-                    <input type="checkbox" name="hobby" id="hobby3" value="exercise">
-                    <label for="hobby3">운동</label>
-                    <input type="checkbox" name="hobby" id="hobby4" value="game">
-                    <label for="hobby4">게임</label>
-                    <input type="checkbox" name="hobby" id="hobby5" value="movie">
-                    <label for="hobby5">영화</label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="btn-wrapper">
-                    <input type="submit" value="제출">&nbsp;
-                    <input type="reset" value="초기화">
-                </td>
-            </tr>
-        </table>
-    </form>
-
-
+    <h1>jQuery_01_base_selector_실습</h1>
+    <h2>Selector1</h2>
+    <script>
+        $(document).ready(function(){
+            $('h1').css('color','red');
+            $('#text').css('color','orange');
+            $('[name=text]').css('color','yellow');
+            $('.text').css('color','green');
+        });
+    
+    </script>
+    <h1> text1 </h1>
+    <h1 id="text"> text2 </h1>
+    <h1 name="text"> text3 </h1>
+    <h1 class="text"> text4 </h1>
+    
+    <hr>
+​
+    <h2>Selector2</h2>
+    <script>
+        $(document).ready(function(){
+            $("ol li:eq(0)").css("color","red");
+            $("ol li:eq(1)").css("color","orange");
+            $("ol li:eq(2)").css("color","green");
+            $("ul li:eq(0)").css("color","blue");
+            $("ul li:eq(1)").css("color","darkviolet");
+            $("ul li:eq(2)").css("color","purple");
+        });
+    
+    </script>
+    <ol>
+        <li class="first"><h2>1-1</h2></li>
+        <li class="second"><h2>1-2</h2></li>
+        <li class="first"><h2>1-3</h2></li>
+    </ol>
+    <ul>
+        <li class="third"><h2>2-1</h2></li>
+        <li class="second"><h2>2-2</h2></li>
+        <li class="third"><h2>2-3</h2></li>
+    </ul>
+​
+    <hr>
+​
+    <h2>Selector3</h2>
+    <script>
+        function clear(){
+            $("table *").removeAttr("style");
+        }
+        function click1(){
+            clear();
+            $("td:contains(10)").css("color","yellow");
+        }
+        function click2(){
+            clear();
+            $("td:contains(20)").css("color","yellow");
+        }
+        function click3(){
+            clear();
+        //    $("td:eq(1),td:eq(4)").css("color","yellow");
+            $("td:nth-of-type(2):not(tr:last-child td)").css("color","yellow");
+            
+        }
+        function click4(){
+            clear();
+            $("td:eq(2),td:eq(5)").css("color","yellow");
+        }
+    
+    </script>
+    <input type="button" value="[가]색 변경" onclick="click1()" />
+    <input type="button" value="[나]색 변경" onclick="click2()" />
+    <input type="button" value="[A]색 변경" onclick="click3()" />
+    <input type="button" value="[B]색 변경" onclick="click4()" />
+	<!--요소의 clear속성명 충돌이 있으니, 전역의 clear함수 호출할 것.-->
+    <input type="button" value="clear()" id="btn-clear" onclick="window.clear();">
+    <br><br>
+​
+    <table border="1">
+        <tr><th>구분</th><th>A</th><th>B</th></tr>
+        <tr><td>가</td><td>10</td><td>10</td></tr>
+        <tr><td>나</td><td>20</td><td>20</td></tr>
+        <tr><td>계</td><td>30</td><td>30</td></tr>
+    </table>
+        
 </body>
-
 </html>
