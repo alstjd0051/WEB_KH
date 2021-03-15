@@ -1,0 +1,10 @@
+.wrap * {
+    border : 1px solid lightgray;
+    display : block;
+    padding : 5px;
+    margin : 15px;
+    color : gray;
+  }
+  .type {
+    width : 500px;
+  }
