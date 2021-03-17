@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery_04_event_실습</title>
+    <script type="text/javascript" src="/04_jquery/js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <h2>Practice</h2>
+    <script>
+        $(function () {
+            var len = $("#number").children().length;
+            console.log("length: " + len);
+            $(document).on("mouseenter", "#number", function () {
+                $(this).children().each(function () {
+                    console.log($(this).attr("class"));
+                });
+            });
+        })
+    </script>
+    <ul id="number">
+        <li class="n1">1</li>
+        <li class="n2">2</li>
+        <li class="n3">3</li>
+    </ul>
+
+    <hr>
+
+    <h2>Event 1</h2>
+    <script>
+        $(document).ready(function () {
+            $("[name=number]").hover(function () { // .click() .hover()  
+                var str = $("select option:selected").text(); //html .text
+                $("#selNum").text(str);
+            });
+        });
+    </script>
+
+    <select name="number">
+        <option value="">== 선택 == </option>
+        <option value="1">1번</option>
+        <option value="2">2번</option>
+        <option value="3">3번</option>
+        <option value="4">4번</option>
+    </select>
+    <span id="selNum"></span>
+
+    <hr>
+
+    <h2>Event 2</h2>
+    <script>
+        $(document).ready(function () {
+            $("tr").one("click", function () { //on,one 둘다가능
+                var str = $(this).children(); //.children()은 어떤 요소의 자식 요소를 선택합니다.
+                //// $.each() 메서드의 첫번째 매겨변수로 위에서 선언한 배열은 전달
+                $.each(str, function (index, str1) {
+                    $("span").eq(index).html(str1.innerHTML); //eq만 가능
+                });
+            });
+        });
+    </script>
+
+    <table id="event2" border="1">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>조회수</th>
+            <th>작성일자</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3번제목</td>
+            <td>0</td>
+            <td>11-07-13</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2번제목</td>
+            <td>0</td>
+            <td>11-07-12</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1번제목</td>
+            <td>0</td>
+            <td>11-07-11</td>
+        </tr>
+    </table>
+    선택된 행 :
+    <span id="s1"></span> /
+    <span id="s2"></span> /
+    <span id="s3"></span> /
+    <span id="s4"></span>
+
+    <hr>
+
+    <h2>Event 3</h2>
+    <script>
+        $(document).ready(function () {
+            $("#event3 tr").one("click", function () {
+                var str = $(this).appendTo(); //자식요소 children
+                $.each(str, function (index, str1) {
+                    $("span").eq(index).html(str1.innerHTML); //eq만 가능 
+                    $(this).css("background", "deeppink");
+                });
+            });
+        })
+    </script>
+
+    <table id="event3" border="1">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>조회수</th>
+            <th>작성일자</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3번제목</td>
+            <td>0</td>
+            <td>11-07-13</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2번제목</td>
+            <td>0</td>
+            <td>11-07-12</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1번제목</td>
+            <td>0</td>
+            <td>11-07-11</td>
+        </tr>
+    </table>
+    선택된 행 :
+    <span id="s5"></span> /
+    <span id="s6"></span> /
+    <span id="s7"></span> /
+    <span id="s8"></span>
+</body>
+
+</html>
